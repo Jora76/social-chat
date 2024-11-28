@@ -50,7 +50,8 @@ function Login() {
                     const tokenCookie = {
                         url: 'http://localhost:3000',
                         name: 'Token',
-                        value: resp.token
+                        value: resp.token,
+                        expirationDate: Math.floor(new Date().getTime() / 1000) + 60 * 60 * 24 * 365
                     };
                     try {
                         electron.setCookie(tokenCookie).then(() => {
@@ -67,12 +68,12 @@ function Login() {
                             const cookie = {
                                 url: 'http://localhost:3000',
                                 name: 'user',
-                                value: JSON.stringify(userObject)
+                                value: JSON.stringify(userObject),
+                                expirationDate: Math.floor(new Date().getTime() / 1000) + 60 * 60 * 24 * 365
                             };
                             try {
                                 electron.setCookie(cookie).then(() => {
                                     setLoading(false);
-                                    // window.location.reload();
                                     setUser(userObject);
                                 });
                             } catch (error) {

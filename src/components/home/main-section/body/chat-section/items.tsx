@@ -83,6 +83,23 @@ export const MessageContainer = styled.div<MessageProps>`
     margin-left: 1vw;
 `;
 
+export const ErrorBanner = styled.div`
+    width: 100%;
+    height: 3vh;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    color: whitesmoke;
+    background-color: ${colorData.denary};
+`;
+
 // ============================== Footer ==============================
 
 export const ChatFooter = styled.div`

@@ -90,7 +90,7 @@ export const Container = styled.div<ContainerProps>`
  * @param {boolean} margin - Si true, l'icône aura un margin. Default: true.
  *
  */
-export function UserIcon({ border_radius = '50%', size = '1vw', margin = true }): JSX.Element {
+export function UserIcon({ border_radius = '50%', size = '1vw', margin = true, connectionState = false }): JSX.Element {
     return (
         <div style={{
             border: `1px solid ${borderColor}`,
@@ -104,6 +104,11 @@ export function UserIcon({ border_radius = '50%', size = '1vw', margin = true })
             marginLeft: margin ? '1vw' : '0',
             padding: '0.2vw'
         }} className="user-icon">
+            {connectionState &&
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%', width: '0.7vw', height: '0.7vw', backgroundColor: `${colorData.tertiary}`, position: 'absolute', left: '15%', top: '57%' }}>
+                    <div style={{ borderRadius: '50%', width: '0.5vw', height: '0.5vw', backgroundColor: `${colorData.quinary}` }} />
+                </div>
+            }
             <PermIdentityOutlinedIcon style={{ fontSize: size }} />
         </div>
     );

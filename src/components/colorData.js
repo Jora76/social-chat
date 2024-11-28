@@ -8,6 +8,7 @@ export const colorData = {
     septenary: '#FFFFFF',
     octonary: '#000000',
     nonary: '#46505a1c',
+    denary: '#ec1d1d',
 }
 
 export const borderColor = colorData.secondary;

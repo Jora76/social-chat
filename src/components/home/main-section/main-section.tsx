@@ -1,13 +1,16 @@
 import { Header } from "./header/header";
 import { Body } from "./body/body";
 import { Panel } from "../../items";
+import { SearchProvider } from "../../../contexts/searchContext";
 
 function MainSection() {
     return (
-        <Panel width="85%" height="100%">
-            <Header />
-            <Body />
-        </Panel>
+        <SearchProvider>
+            <Panel width="85%" height="100%">
+                <Header />
+                <Body />
+            </Panel>
+        </SearchProvider>
     );
 }
 

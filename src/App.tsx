@@ -17,7 +17,6 @@ function App() {
   // electron.getCookies("http://localhost:3000").then((cookies: any) => {
   //   console.log(cookies);
   // });
-  // const electron = (window as any).electronAPI;
   // const [logState, setLogState] = useState(0);
 
   // const isLogged = async (): Promise<boolean> => {
@@ -42,7 +41,7 @@ function App() {
   return (
     <div className="App">
       {logState === 1 &&
-        <Home />
+        <Home /> 
       }
       {
         logState === 2 &&
